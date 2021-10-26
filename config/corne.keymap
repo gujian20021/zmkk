@@ -107,19 +107,19 @@ media_layer {
 
 
 
-number_layer {
-// -----------------------------------------------------------------------------------------
-// |     |     |     |     |     |     |   | [{  |  7  |  8  |  9  | ]}  | `~  |
-// |     | WIN | ALT |CTRL |SHFT |     |   | ;:  |  4  |  5  |  6  | =+  |     |
-// |     |     |     |     |     |     |   | 0)  |  1  |  2  |  3  | \|  |     |
-//                   |     |     |     |   |     |     |     |
-    bindings = <
-        &trans &trans &trans &trans &trans &trans           &kp LBKT &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &kp RBKT &kp GRAVE
-        &trans &kp LGUI &kp LALT &kp LSHFT &trans &trans    &kp SEMI &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &kp EQUAL &trans
-        &trans &trans &trans &trans &trans &trans           &kp NUMBER_0 &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp BSLH &trans
-                &trans &trans &trans                                &trans &trans &trans
-    >;
-};
+// number_layer {
+// // -----------------------------------------------------------------------------------------
+// // |     |     |     |     |     |     |   | [{  |  7  |  8  |  9  | ]}  | `~  |
+// // |     | WIN | ALT |CTRL |SHFT |     |   | ;:  |  4  |  5  |  6  | =+  |     |
+// // |     |     |     |     |     |     |   | 0)  |  1  |  2  |  3  | \|  |     |
+// //                   |     |     |     |   |     |     |     |
+//     bindings = <
+//         &trans &trans &trans &trans &trans &trans           &kp LBKT &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &kp RBKT &kp GRAVE
+//         &trans &kp LGUI &kp LALT &kp LSHFT &trans &trans    &kp SEMI &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &kp EQUAL &trans
+//         &trans &trans &trans &trans &trans &trans           &kp NUMBER_0 &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp BSLH &trans
+//                 &trans &trans &trans                                &trans &trans &trans
+//     >;
+// };
 
 
 
@@ -129,34 +129,34 @@ number_layer {
 
 
 
-symbol_layer {
-// -----------------------------------------------------------------------------------------
-// |     |     |     |     |     |     |   |  (  |  &  |  *  |  (  |  )  |  ~  |
-// |     | WIN | ALT |CTRL |SHFT |     |   |  :  |  $  |  %  |  ^  |  +  |     |
-// |     |     |     |     |     |     |   |  )  |  !  |  @  |  #  | "|" |     |
-//                   |     |     |     |   |     |     |     |
-    bindings = <
-        &trans &trans &trans &trans &trans &trans           &kp LPAR &kp AMPS &kp ASTRK &kp LPAR &kp RPAR &kp TILDE
-        &trans &kp LGUI &kp LALT &kp LSHFT &trans &trans    &kp COLON &kp DOLLAR &kp PERCENT &kp CARET &kp PLUS &trans
-        &trans &trans &trans &trans &trans &trans           &kp RPAR &kp EXCL &kp AT &kp HASH &kp PIPE &trans
-                &trans &trans &trans                                &trans &trans &trans
-    >;
-};
-
-
-function_layer {
-// -----------------------------------------------------------------------------------------
-// |     |     |     |     |     |     |   |     | F7  | F8  | F9  | F12 |     |
-// |     | WIN | ALT |CTRL |SHFT |     |   |     | F4  | F5  | F6  | F11 |     |
-// |     |     |     |     |     |     |   |     | F1  | F2  | F3  | F10 |     |
-//                   |     |     |     |   |     |     |     |
-    bindings = <
-        &trans &trans &trans &trans &trans &trans           &trans &kp F7 &kp F8 &kp F9 &kp F12 &trans
-        &trans &kp LGUI &kp LALT &kp LSHFT &trans &trans    &trans &kp F4 &kp F5 &kp F6 &kp F11 &trans
-        &trans &trans &trans &trans &trans &trans           &trans &kp F1 &kp F2 &kp F3 &kp F10 &trans
-                &trans &trans &trans                                &trans &trans &trans
-    >;
-};
+// symbol_layer {
+// // -----------------------------------------------------------------------------------------
+// // |     |     |     |     |     |     |   |  (  |  &  |  *  |  (  |  )  |  ~  |
+// // |     | WIN | ALT |CTRL |SHFT |     |   |  :  |  $  |  %  |  ^  |  +  |     |
+// // |     |     |     |     |     |     |   |  )  |  !  |  @  |  #  | "|" |     |
+// //                   |     |     |     |   |     |     |     |
+//     bindings = <
+//         &trans &trans &trans &trans &trans &trans           &kp LPAR &kp AMPS &kp ASTRK &kp LPAR &kp RPAR &kp TILDE
+//         &trans &kp LGUI &kp LALT &kp LSHFT &trans &trans    &kp COLON &kp DOLLAR &kp PERCENT &kp CARET &kp PLUS &trans
+//         &trans &trans &trans &trans &trans &trans           &kp RPAR &kp EXCL &kp AT &kp HASH &kp PIPE &trans
+//                 &trans &trans &trans                                &trans &trans &trans
+//     >;
+// };
+// 
+// 
+// function_layer {
+// // -----------------------------------------------------------------------------------------
+// // |     |     |     |     |     |     |   |     | F7  | F8  | F9  | F12 |     |
+// // |     | WIN | ALT |CTRL |SHFT |     |   |     | F4  | F5  | F6  | F11 |     |
+// // |     |     |     |     |     |     |   |     | F1  | F2  | F3  | F10 |     |
+// //                   |     |     |     |   |     |     |     |
+//     bindings = <
+//         &trans &trans &trans &trans &trans &trans           &trans &kp F7 &kp F8 &kp F9 &kp F12 &trans
+//         &trans &kp LGUI &kp LALT &kp LSHFT &trans &trans    &trans &kp F4 &kp F5 &kp F6 &kp F11 &trans
+//         &trans &trans &trans &trans &trans &trans           &trans &kp F1 &kp F2 &kp F3 &kp F10 &trans
+//                 &trans &trans &trans                                &trans &trans &trans
+//     >;
+// };
 
 
         };
