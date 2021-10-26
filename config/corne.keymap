@@ -86,19 +86,19 @@ button_layer {
     >;
 };
 
-// media_layer {
-// // -----------------------------------------------------------------------------------------
-// // |     |     |     |     |     |     |   |     |     |     |     |     |     |
-// // |     | WIN | ALT |CTRL |SHFT |     |   |     |     |PREV |VO_DN|VO_UP|NEXT |
-// // |     |     |     |     |     |     |   |     |     |     |     |     |     |
-// //                   |     |     |     |   |     |STOP |PL/PA|MUTE |
-//     bindings = <
-//         &trans &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &trans
-//         &trans &kp LGUI &kp LALT &kp LSHFT &trans               &trans &kp K_PREV &kp K_VOL_DN &kp K_VOL_UP &kp K_NEXT &trans
-//         &trans &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &trans
-//                 &trans &trans &trans                                &kp K_STOP &kp K_PP &kp K_MUTE
-//     >;
-// };
+media_layer {
+// -----------------------------------------------------------------------------------------
+// |     |     |     |     |     |     |   |     |     |     |     |     |     |
+// |     | WIN | ALT |CTRL |SHFT |     |   |     |     |PREV |VO_DN|VO_UP|NEXT |
+// |     |     |     |     |     |     |   |     |     |     |     |     |     |
+//                   |     |     |     |   |     |STOP |PL/PA|MUTE |
+    bindings = <
+        &trans &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &trans
+        &trans &kp LGUI &kp LALT &kp LSHFT &trans               &trans &kp K_PREV &kp K_VOL_DN &kp K_VOL_UP &kp K_NEXT &trans
+        &trans &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &trans
+                &trans &trans &trans                                &kp K_STOP &kp K_PP &kp K_MUTE
+    >;
+};
 
 
 
@@ -116,7 +116,7 @@ number_layer {
     bindings = <
         &trans &trans &trans &trans &trans &trans           &kp LBKT &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &kp RBKT &kp GRAVE
         &trans &kp LGUI &kp LALT &kp LSHFT &trans           &kp SEMI &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &kp EQUAL &trans
-        &trans &trans &trans &trans &trans &trans           &kp NUMBER_0 &kp NUMBER_1 &kp &kp NUMBER_2 &kp NUMBER_3 &kp BSLH &trans
+        &trans &trans &trans &trans &trans &trans           &kp NUMBER_0 &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp BSLH &trans
                 &trans &trans &trans                                &trans &trans &trans
     >;
 };
