@@ -36,7 +36,7 @@ default_layer {
         &kp TAB   &kp Q &kp W &kp E &kp R &kp T         &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
         &kp LCTRL &kp A &kp S &kp D &kp F &kp G         &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
         &kp LSHFT &kp Z &kp X &kp C &kp V &kp B         &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-        &kp LGUI &lt NAV_LYR SPACE &lt NAV_LYR TAB      &lt SYM_LYR RETURN &lt NAV_LYR BSPC &lt NAV_LYR DEL
+        &kp LGUI &lt NAV_LYR SPACE &lt MSE_LYR TAB      &lt SYM_LYR RETURN &lt NUM_LYR BSPC &lt FUN_LYR DEL
     >;
 };
 
@@ -53,6 +53,39 @@ nav_layer {
                 &trans &trans &trans                                &kp ENTER &trans &kp RALT
     >;
 };
+
+// TODO:
+mouse_layer {
+// -----------------------------------------------------------------------------------------
+// |     |     |     |     |     |     |   |     |REDO |PSTE | CPY | CUT |UNDO |
+// |     | WIN | ALT |CTRL |SHFT |     |   |     | LFT | DWN |  UP | RGT |     |
+// |     |     |     |     |     |     |   |     | LFT | DWN |  UP | RGT |     |
+//                   |     |     |     |   | M1  | M3  | M2  |
+    bindings = <
+        &trans &trans &trans &trans &trans &trans           &trans &trans &trans &trans &trans &trans
+        &trans &kp LGUI &kp LALT &kp LSHFT &trans           &trans &trans &trans &trans &trans &trans
+        &trans &trans &trans &trans &trans &trans           &trans &trans &trans &trans &trans &trans
+                &trans &trans &trans                                &trans &trans &trans
+    >;
+};
+
+
+
+
+button_layer {
+// -----------------------------------------------------------------------------------------
+// |     |     |     |     |     |     |   |     |     |     |     |     |     |
+// |     |     |     |     |     |     |   |     |     |     |     |     |     |
+// |     |     |     |     |     |     |   |     |     |     |     |     |     |
+//                   |     |     |     |   |     |     |     |
+    bindings = <
+        &trans &trans &trans &trans &trans &trans           &trans &trans &trans &trans &trans &trans
+        &trans &trans &trans &trans &trans &trans           &trans &trans &trans &trans &trans &trans
+        &trans &trans &trans &trans &trans &trans           &trans &trans &trans &trans &trans &trans
+                &trans &trans &trans                                &trans &trans &trans
+    >;
+};
+
 
 
 
