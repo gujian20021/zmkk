@@ -17,7 +17,6 @@
 #define MSE_LYR 2
 #define BUT_LYR 3
 #define MED_LYR 4
-// #define NUM_LYR 5
 #define SYM_LYR 5
 #define MAC_LYR 6
 
@@ -114,19 +113,7 @@ media_layer {
 
 
 
-// symbol_layer {
-// // -----------------------------------------------------------------------------------------
-// // |     | `~  |     |  (  |  )  |     |   | [{  | 7&  | 8*  | 9(  | ]}  |     |
-// // |     | -=  | =+  |  [  |  ]  |     |   | ;:  | 4$  | 5%  | 6^  | -_  |     |
-// // |     |  ;: | \|  |  {  |  }  |     |   | 0)  | 1!  | 2#  | 3#  | ;:  |     |
-// //                   |     |     |     |   |     |     |     |
-//     bindings = <
-//         &trans &kp GRAVE &trans &trans &trans &trans           &kp LBKT &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &kp RBKT &trans
-//         &trans &kp LGUI &kp LALT &kp LSHFT &trans &trans    &kp SEMI &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &kp EQUAL &trans
-//         &trans &kp BSLH &trans &trans &trans &trans           &kp NUMBER_0 &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp BSLH &trans
-//                 &trans &trans &trans                                &trans &trans &trans
-//     >;
-// };
+
 
 
 symbol_layer {
@@ -143,6 +130,44 @@ symbol_layer {
     >;
 };
 
+
+
+
+
+macro_layer {
+// -----------------------------------------------------------------------------------------
+// |     |     |     |     | AF4 |     |   |     | F7  | F8  | F9  | F12 |     |
+// |     |REDO |SAVE | ALT |     |     |   |     | F4  | F5  | F6  | F11 |     |
+// |     |UNDO | CUT | CPY |PSTE |     |   |     | F1  | F2  | F3  | F10 |     |
+//                   |     |     |     |   |     |     |     |
+    bindings = <
+        &trans &trans &trans &trans &kp F4 &trans                   &trans &kp F7 &kp F8 &kp F9 &kp F12 &trans
+        &trans &kp K_REDO &kp K_SAVE &kp LALT &trans &trans         &trans &kp F4 &kp F5 &kp F6 &kp F11 &trans
+        &trans &kp K_UNDO &kp K_CUT &kp K_COPY &kp K_PASTE &trans   &trans &kp F1 &kp F2 &kp F3 &kp F10 &trans
+                &trans &trans &trans                                    &trans &trans &trans
+    >;
+};
+
+
+        };
+};
+
+
+
+                
+// symbol_layer {
+// // -----------------------------------------------------------------------------------------
+// // |     | `~  |     |  (  |  )  |     |   | [{  | 7&  | 8*  | 9(  | ]}  |     |
+// // |     | -=  | =+  |  [  |  ]  |     |   | ;:  | 4$  | 5%  | 6^  | -_  |     |
+// // |     |  ;: | \|  |  {  |  }  |     |   | 0)  | 1!  | 2#  | 3#  | ;:  |     |
+// //                   |     |     |     |   |     |     |     |
+//     bindings = <
+//         &trans &kp GRAVE &trans &trans &trans &trans           &kp LBKT &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &kp RBKT &trans
+//         &trans &kp LGUI &kp LALT &kp LSHFT &trans &trans    &kp SEMI &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &kp EQUAL &trans
+//         &trans &kp BSLH &trans &trans &trans &trans           &kp NUMBER_0 &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp BSLH &trans
+//                 &trans &trans &trans                                &trans &trans &trans
+//     >;
+// };
 // symbol_layer {
 // // -----------------------------------------------------------------------------------------
 // // |     | !1  | 2@  | 3#  | 4$  | 5%  |   | 6^  | 7&  | 8*  | 9(  | 0)  |     |
@@ -156,13 +181,6 @@ symbol_layer {
 //                 &trans &trans &trans                                &trans &trans &trans
 //     >;
 // };
-
-
-
-
-
-
-
 // symbol_layer {
 // // -----------------------------------------------------------------------------------------
 // // |     |     |     |     |     |     |   |  (  |  &  |  *  |  (  |  )  |  ~  |
@@ -176,26 +194,3 @@ symbol_layer {
 //                 &trans &trans &trans                                &trans &trans &trans
 //     >;
 // };
-
-
-macro_layer {
-// -----------------------------------------------------------------------------------------
-// |     |     |     |     | AF4 |     |   |     | F7  | F8  | F9  | F12 |     |
-// |     |REDO |SAVE | ALT |     |     |   |     | F4  | F5  | F6  | F11 |     |
-// |     |UNDO | CUT | CPY |PSTE |     |   |     | F1  | F2  | F3  | F10 |     |
-//                   |     |     |     |   |     |     |     |
-    bindings = <
-        &trans &trans &trans &trans &kp F4 &trans                   &trans &kp F7 &kp F8 &kp F9 &kp F12 &trans
-        &trans &kp K_REDO &kp SAVE &kp LALT &trans &trans          &trans &kp F4 &kp F5 &kp F6 &kp F11 &trans
-        &trans &kp K_UNDO &kp K_CUT &kp K_COPY &kp K_PASTE &trans           &trans &kp F1 &kp F2 &kp F3 &kp F10 &trans
-                &trans &trans &trans                                &trans &trans &trans
-    >;
-};
-
-
-        };
-};
-
-
-
-                
