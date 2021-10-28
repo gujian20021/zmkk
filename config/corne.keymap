@@ -17,9 +17,9 @@
 #define MSE_LYR 2
 #define BUT_LYR 3
 #define MED_LYR 4
-#define NUM_LYR 5
-#define SYM_LYR 6
-#define FUN_LYR 7
+// #define NUM_LYR 5
+#define SYM_LYR 5
+#define MAC_LYR 6
 
 / {
         keymap {
@@ -30,13 +30,13 @@ default_layer {
 //  | TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  | LCTRL |
 //  |SHFT |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  ;  |  '  |
 //  |CTRL |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  /  |SHFT |
-//                    | GUI | ESC | SPC |   |BSPC | ENT | DEL |
-//                    | GUI | NAV | MSE |   | SYM | NUM | FUN |
+//                    | TAB | ESC | SPC |   |BSPC | ENT | DEL |
+//                    |CTRL | NAV | SPC |   | ALT | SYM | MAC |
     bindings = <
         &kp TAB   &kp Q &kp W &kp E &kp R &kp T         &kp Y &kp U  &kp I     &kp O   &kp P    &kp LCTRL
         &kp LSHFT &kp A &kp S &kp D &kp F &kp G         &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
         &kp LCTRL &kp Z &kp X &kp C &kp V &kp B         &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RSHFT
-        &kp LGUI &lt NAV_LYR ESC &kp SPACE      &lt NUM_LYR BSPC &lt SYM_LYR RETURN &lt FUN_LYR DEL
+        &mt LCTRL TAB &lt NAV_LYR ESC &kp SPACE         &mt LALT BSPC &lt SYM_LYR RETURN &lt MAC_LYR DEL
     >;
 };
 
@@ -114,53 +114,80 @@ media_layer {
 
 
 
-number_layer {
-// -----------------------------------------------------------------------------------------
-// |     |     |     |     |     |     |   | [{  |  7  |  8  |  9  | ]}  | `~  |
-// |     | WIN | ALT |CTRL |SHFT |     |   | ;:  |  4  |  5  |  6  | =+  |     |
-// |     |     |     |     |     |     |   | 0)  |  1  |  2  |  3  | \|  |     |
-//                   |     |     |     |   |     |     |     |
-    bindings = <
-        &trans &trans &trans &trans &trans &trans           &kp LBKT &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &kp RBKT &kp GRAVE
-        &trans &kp LGUI &kp LALT &kp LSHFT &trans &trans    &kp SEMI &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &kp EQUAL &trans
-        &trans &trans &trans &trans &trans &trans           &kp NUMBER_0 &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp BSLH &trans
-                &trans &trans &trans                                &trans &trans &trans
-    >;
-};
-
-
-
-
-
-
-
+// symbol_layer {
+// // -----------------------------------------------------------------------------------------
+// // |     | `~  |     |  (  |  )  |     |   | [{  | 7&  | 8*  | 9(  | ]}  |     |
+// // |     | -=  | =+  |  [  |  ]  |     |   | ;:  | 4$  | 5%  | 6^  | -_  |     |
+// // |     |  ;: | \|  |  {  |  }  |     |   | 0)  | 1!  | 2#  | 3#  | ;:  |     |
+// //                   |     |     |     |   |     |     |     |
+//     bindings = <
+//         &trans &kp GRAVE &trans &trans &trans &trans           &kp LBKT &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &kp RBKT &trans
+//         &trans &kp LGUI &kp LALT &kp LSHFT &trans &trans    &kp SEMI &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &kp EQUAL &trans
+//         &trans &kp BSLH &trans &trans &trans &trans           &kp NUMBER_0 &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp BSLH &trans
+//                 &trans &trans &trans                                &trans &trans &trans
+//     >;
+// };
 
 
 symbol_layer {
 // -----------------------------------------------------------------------------------------
-// |     |     |     |     |     |     |   |  (  |  &  |  *  |  (  |  )  |  ~  |
-// |     | WIN | ALT |CTRL |SHFT |     |   |  :  |  $  |  %  |  ^  |  +  |     |
-// |     |     |     |     |     |     |   |  )  |  !  |  @  |  #  | "|" |     |
-//                   |     |     |     |   |     |     |     |
+// | `~  | [{  | 7&  | 8*  | 9(  | ]}  |   |     |  (  |  )  | -=  | =+  |     |
+// |     | ;:  | 4$  | 5%  | 6^  |     |   |     |  [  |  ]  | ;:  | \|  |     |
+// |     | 0)  | 1!  | 2#  | 3#  |     |   |     |  {  |  }  |     | `~  |     |
+//                   |     |SHFT |     |   |     |     |     |
     bindings = <
-        &trans &trans &trans &trans &trans &trans           &kp LPAR &kp AMPS &kp ASTRK &kp LPAR &kp RPAR &kp TILDE
-        &trans &kp LGUI &kp LALT &kp LSHFT &trans &trans    &kp COLON &kp DOLLAR &kp PERCENT &kp CARET &kp PLUS &trans
-        &trans &trans &trans &trans &trans &trans           &kp RPAR &kp EXCL &kp AT &kp HASH &kp PIPE &trans
-                &trans &trans &trans                                &trans &trans &trans
+        &kp GRAVE &kp LBKT &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &kp RBKT          &trans &kp LPAR &kp RPAR &kp MINUS &kp EQUAL &trans
+        &trans &kp SEMI &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &trans               &trans &kp LBKT &kp RBKT &kp SEMI &kp BSLH &trans
+        &trans &kp NUMBER_0 &kp NUMBER_1 &kp NUMBER_3 &trans                        &trans &kp LBRC &kp RBRC &trans &kp GRAVE &trans
+                &trans &kp LSHFT &trans                                &trans &trans &trans
     >;
 };
 
+// symbol_layer {
+// // -----------------------------------------------------------------------------------------
+// // |     | !1  | 2@  | 3#  | 4$  | 5%  |   | 6^  | 7&  | 8*  | 9(  | 0)  |     |
+// // |     | WIN | ALT |CTRL |SHFT |     |   |  :  | -_  | =+  | [{  | ]}  |     |
+// // |     |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |     |
+// //                   |     |     |     |   |     |     |     |
+//     bindings = <
+//         &trans &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_4 &kp NUMBER_5          &kp NUMBER_6 &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &kp NUMBER_0 &trans
+//         &trans &kp LGUI &kp LALT &kp LSHFT &trans &trans                    &kp COLON &kp DOLLAR &kp PERCENT &kp CARET &kp PLUS &trans
+//         &trans &kp EXCL &kp AT &kp HASH &kp DOLLAR &kp PERCENT      &kp CARET &kp AMPS &kp ASTRK &kp LPAR &kp RPAR
+//                 &trans &trans &trans                                &trans &trans &trans
+//     >;
+// };
 
-function_layer {
+
+
+
+
+
+
+// symbol_layer {
+// // -----------------------------------------------------------------------------------------
+// // |     |     |     |     |     |     |   |  (  |  &  |  *  |  (  |  )  |  ~  |
+// // |     | WIN | ALT |CTRL |SHFT |     |   |  :  |  $  |  %  |  ^  |  +  |     |
+// // |     |     |     |     |     |     |   |  )  |  !  |  @  |  #  | "|" |     |
+// //                   |     |     |     |   |     |     |     |
+//     bindings = <
+//         &trans &trans &trans &trans &trans &trans           &kp LPAR &kp AMPS &kp ASTRK &kp LPAR &kp RPAR &kp TILDE
+//         &trans &kp LGUI &kp LALT &kp LSHFT &trans &trans    &kp COLON &kp DOLLAR &kp PERCENT &kp CARET &kp PLUS &trans
+//         &trans &trans &trans &trans &trans &trans           &kp RPAR &kp EXCL &kp AT &kp HASH &kp PIPE &trans
+//                 &trans &trans &trans                                &trans &trans &trans
+//     >;
+// };
+
+
+macro_layer {
 // -----------------------------------------------------------------------------------------
-// |     |     |     |     |     |     |   |     | F7  | F8  | F9  | F12 |     |
-// |     | WIN | ALT |CTRL |SHFT |     |   |     | F4  | F5  | F6  | F11 |     |
-// |     |     |     |     |     |     |   |     | F1  | F2  | F3  | F10 |     |
+// |     |     |     |     | AF4 |     |   |     | F7  | F8  | F9  | F12 |     |
+// |     |REDO |SAVE | ALT |     |     |   |     | F4  | F5  | F6  | F11 |     |
+// |     |UNDO | CUT | CPY |PSTE |     |   |     | F1  | F2  | F3  | F10 |     |
 //                   |     |     |     |   |     |     |     |
     bindings = <
-        &trans &trans &trans &trans &trans &trans           &trans &kp F7 &kp F8 &kp F9 &kp F12 &trans
-        &trans &kp LGUI &kp LALT &kp LSHFT &trans &trans    &trans &kp F4 &kp F5 &kp F6 &kp F11 &trans
-        &trans &trans &trans &trans &trans &trans           &trans &kp F1 &kp F2 &kp F3 &kp F10 &trans
+        &trans &trans &trans &trans &kp F4 &trans                   &trans &kp F7 &kp F8 &kp F9 &kp F12 &trans
+        &trans &kp K_REDO &kp SAVE &kp LALT &trans &trans          &trans &kp F4 &kp F5 &kp F6 &kp F11 &trans
+        &trans &kp K_UNDO &kp K_CUT &kp K_COPY &kp K_PASTE &trans           &trans &kp F1 &kp F2 &kp F3 &kp F10 &trans
                 &trans &trans &trans                                &trans &trans &trans
     >;
 };
