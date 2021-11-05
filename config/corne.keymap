@@ -35,7 +35,8 @@ default_layer {
     bindings = <
         &kp TAB   &kp Q &kp W &kp F &kp P &kp B         &kp J &kp L  &kp U     &kp Y   &kp SEMI &tog QWE_LYR
         &kp LSHFT &kp A &kp R &kp S &kp T &kp G         &kp M &kp N  &kp E     &kp I   &kp O &kp SQT
-        &kp LCTRL &kp Z &kp X &kp C &kp D &kp V         &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &kp RSHFT
+        &kp LCTRL &k
+        srtartarstarstarst  qwrp Z &kp X &kp C &kp D &kp V         &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &kp RSHFT
         &mt LCTRL TAB &lt SYM_LYR ESC &kp SPACE         &mt LSHFT BSPC &lt NAV_LYR RETURN &lt MAC_LYR DEL
     >;
 };
@@ -140,7 +141,7 @@ symbol_layer {
 //                   |     |     |     |   |     |     |     |
     bindings = <
         &trans &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_4 &kp NUMBER_5          &kp NUMBER_6 &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &kp NUMBER_0 &trans
-        &trans &kp GRAVE &kp BSLH &kp APOS &trans &trans                   &kp COLON &kp DOLLAR &kp PERCENT &kp CARET &kp PLUS &trans
+        &trans &kp GRAVE &kp BSLH &kp APOS &trans &trans            &trans &kp MINUS &kp EQUAL &kp LBKT &kp RBKT &trans
         &trans &kp EXCL &kp AT &kp HASH &kp DOLLAR &kp PERCENT      &kp CARET &kp AMPS &kp ASTRK &kp LPAR &kp RPAR
                 &trans &trans &trans                                &trans &trans &trans
     >;
@@ -150,7 +151,7 @@ symbol_layer {
 
 // symbol_layer {
 // // -----------------------------------------------------------------------------------------
-// // | `~  | [{  | 7&  | 8*  | 9(  | ]}  |   |     |  (  |  )  | -=  | =+  |     |
+// // | `~  | [{  | 7&  | 8*  | 9(  | ]}  |   |     |  (  |  )  | -  | =+  |     |
 // // |     | ;:  | 4$  | 5%  | 6^  |     |   |     |  [  |  ]  | ;:  | \|  |     |
 // // |     | 0)  | 1!  | 2#  | 3#  |     |   |     |  {  |  }  |     | `~  |     |
 // //                   |     |SHFT |     |   |     |     |     |
