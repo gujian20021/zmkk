@@ -67,7 +67,7 @@ nav_layer {
 //                   |     |     |     |   | ENT |     | ALT |
     bindings = <
         &trans &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &trans
-        &trans &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &trans     &kp CAPS &kp LEFT &kp DOWN &kp UP &kp RIGHT
+        &trans &sk LGUI &sk LALT &sk LCTRL &sk LSHFT &trans     &kp CAPS &kp LEFT &kp DOWN &kp UP &kp RIGHT
         &trans &trans &trans &trans &trans &trans               &trans &kp HOME &kp PG_DN &kp PG_UP &kp END &trans
                 &trans &trans &trans                                &kp ENTER &trans &kp RALT
     >;
