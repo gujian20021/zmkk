@@ -129,38 +129,35 @@ media_layer {
 
 
 
-// swapped / mirrored from original layout:
-
-
-symbol_layer {
-// -----------------------------------------------------------------------------------------
-// |     | !1  | 2@  | 3#  | 4$  | 5%  |   | 6^  | 7&  | 8*  | 9(  | 0)  |     |
-// |     | `~  | \|  |  '  |     |     |   |     | -_  | =+  | [{  | ]}  |     |
-// |     |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |     |
-//                   |     |     |     |   |     |     |     |
-    bindings = <
-        &trans &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_4 &kp NUMBER_5          &kp NUMBER_6 &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &kp NUMBER_0 &trans
-        &trans &kp GRAVE &kp BSLH &kp APOS &trans &trans            &trans &kp MINUS &kp EQUAL &kp LBKT &kp RBKT &trans
-        &trans &kp EXCL &kp AT &kp HASH &kp DOLLAR &kp PERCENT      &kp CARET &kp AMPS &kp ASTRK &kp LPAR &kp RPAR
-                &trans &trans &trans                                &trans &trans &trans
-    >;
-};
+// symbol_layer {
+// // -----------------------------------------------------------------------------------------
+// // |     | !1  | 2@  | 3#  | 4$  | 5%  |   | 6^  | 7&  | 8*  | 9(  | 0)  |     |
+// // |     | `~  | \|  |  '  |     |     |   |     | -_  | =+  | [{  | ]}  |     |
+// // |     |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |     |
+// //                   |     |     |     |   |     |     |     |
+//     bindings = <
+//         &trans &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_4 &kp NUMBER_5          &kp NUMBER_6 &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &kp NUMBER_0 &trans
+//         &trans &kp GRAVE &kp BSLH &kp APOS &trans &trans            &trans &kp MINUS &kp EQUAL &kp LBKT &kp RBKT &trans
+//         &trans &kp EXCL &kp AT &kp HASH &kp DOLLAR &kp PERCENT      &kp CARET &kp AMPS &kp ASTRK &kp LPAR &kp RPAR
+//                 &trans &trans &trans                                &trans &trans &trans
+//     >;
+// };
 
 
 
 // symbol_layer {
-// // -----------------------------------------------------------------------------------------
-// // | `~  | [{  | 7&  | 8*  | 9(  | ]}  |   |     |  (  |  )  | -  | =+  |     |
-// // |     | ;:  | 4$  | 5%  | 6^  |     |   |     |  [  |  ]  | ;:  | \|  |     |
-// // |     | 0)  | 1!  | 2#  | 3#  |     |   |     |  {  |  }  |     | `~  |     |
-// //                   |     |SHFT |     |   |     |     |     |
-//     bindings = <
-//         &kp GRAVE &kp LBKT &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &kp RBKT          &trans &kp LPAR &kp RPAR &kp MINUS &kp EQUAL &trans
-//         &trans &kp SEMI &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &trans               &trans &kp LBKT &kp RBKT &kp SEMI &kp BSLH &trans
-//         &trans &kp NUMBER_0 &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &trans                        &trans &kp LBRC &kp RBRC &trans &kp GRAVE &trans
-//                 &trans &kp LSHFT &trans                                &trans &trans &trans
-//     >;
-// };
+// -----------------------------------------------------------------------------------------
+// |     | `~  | 7&  | 8*  | 9(  | 0)  |   |     |  (  |  )  |  -  | =+  |     |
+// |     | [{  | 4$  | 5%  | 6^  | ]}  |   |     |  [  |  ]  | ;:  | '"  |     |
+// |     | 0)  | 1!  | 2#  | 3#  |     |   |     |  {  |  }  |     | \|  |     |
+//                   |     |     |     |   |SHFT |     |     |
+    bindings = <
+        &trans &kp GRAVE &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &kp NUMBER_0          &trans &kp LPAR &kp RPAR &kp MINUS &kp EQUAL &trans
+        &trans &kp LBKT &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &kp RBKT               &trans &kp LBKT &kp RBKT &kp SEMI &kp APOS &trans
+        &trans &kp NUMBER_0 &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &trans             &trans &kp LBRC &kp RBRC &trans &kp BSLH &trans
+                &trans &trans &trans                 &kp LSHFT &trans &trans
+    >;
+};
 
 
 
