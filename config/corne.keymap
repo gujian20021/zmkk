@@ -27,13 +27,13 @@
 
 default_layer {
 // -----------------------------------------------------------------------------------------
-//  | RGB_TOG |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L  |  U  |  Y  |  ;  |QWERT|
+//  | TAB |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L  |  U  |  Y  |  ;  |QWERT|
 //  |SHFT |  A  |  R  |  S  |  T  |  G  |   |  M  |  N  |  E  |  I  |  O  |  '  |
 //  |CTRL |  Z  |  X  |  C  |  D  |  V  |   |  K  |  H  |  ,  |  .  |  /  | ALT |
 //                    | TAB | ESC | SPC |   |BSPC | ENT | DEL |
 //                    |CTRL | SYM | SPC |   |SHFT | NAV | MAC |
     bindings = <
-        &kp RGB_TOG   &kp Q &kp W &kp F &kp P &kp B         &kp J &kp L  &kp U     &kp Y   &kp SEMI &tog QWE_LYR
+        &kp TAB   &kp Q &kp W &kp F &kp P &kp B         &kp J &kp L  &kp U     &kp Y   &kp SEMI &tog QWE_LYR
         &kp LSHFT &kp A &kp R &kp S &kp T &kp G         &kp M &kp N  &kp E     &kp I   &kp O &kp APOS
         &kp LCTRL &kp Z &kp X &kp C &kp D &kp V         &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &kp RALT
         &mt LCTRL TAB &lt SYM_LYR ESC &kp SPACE         &mt LSHFT BSPC &lt NAV_LYR RETURN &lt MAC_LYR DEL
