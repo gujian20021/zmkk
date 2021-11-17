@@ -37,7 +37,7 @@ default_layer {
 //                    | TAB | ESC | SPC |   |BSPC | ENT | DEL |
 //                    |CTRL | SYM | SPC |   |SHFT | NAV | MAC |
     bindings = <
-        &trans &kp Q &kp W &kp F &kp P &kp B         &kp J &kp L  &kp U     &kp Y   &kp SEMI &rgb_ug RGB_TOG
+        &trans &kp Q &kp W &kp F &kp P &kp B         &kp J &kp L  &kp U     &kp Y   &kp SEMI &tog QWE_LYR
         &trans &kp A &kp R &kp S &kp T &kp G         &kp M &kp N  &kp E     &kp I   &kp O &kp APOS
         &trans &kp Z &kp X &kp C &kp D &kp V         &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &kp RALT
         &mt LCTRL TAB &lt SYM_LYR ESC &kp SPACE         &mt LSHFT BSPC &lt NAV_LYR RETURN &lt MAC_LYR DEL
@@ -169,14 +169,14 @@ symbol_layer {
 
 macro_layer {
 // -----------------------------------------------------------------------------------------
-// |     |     |     |     | AF4 |     |   |     | F7  | F8  | F9  | F12 |     |
-// |     |REDO |SAVE | ALT |     |     |   |     | F4  | F5  | F6  | F11 |     |
-// |     |UNDO | CUT | CPY |PSTE |     |   |     | F1  | F2  | F3  | F10 |     |
+// |     |     |     |     | AF4 |RGBHE|   |     | F7  | F8  | F9  | F12 |RGBTG|
+// |     |REDO |SAVE | ALT |RGBBI|RGBBD|   |     | F4  | F5  | F6  | F11 |BTCLR|
+// |     |UNDO | CUT | CPY |PSTE |RGBEF|   |     | F1  | F2  | F3  | F10 |OUTTG|
 //                   |     | DEL |     |   |     |     |     |
     bindings = <
-        &trans &trans &trans &trans &kp F4 &trans                   &trans &kp F7 &kp F8 &kp F9 &kp F12 &trans
-        &trans &kp K_REDO &kp C_AC_SAVE &kp LALT &trans &trans         &trans &kp F4 &kp F5 &kp F6 &kp F11 &trans
-        &trans &kp K_UNDO &kp K_CUT &kp K_COPY &kp K_PASTE &trans   &trans &kp F1 &kp F2 &kp F3 &kp F10 &trans
+        &trans &trans &trans &trans &kp F4 &rgb_ug RGB_HUI                              &trans &kp F7 &kp F8 &kp F9 &kp F12 &rgb_ug RGB_TOG
+        &trans &kp K_REDO &kp C_AC_SAVE &kp LALT &rgb_ug RGB_BRI &rgb_ug RGB_BRD        &trans &kp F4 &kp F5 &kp F6 &kp F11 &bt BT_CLR
+        &trans &kp K_UNDO &kp K_CUT &kp K_COPY &kp K_PASTE &rgb_ug RGB_EFF                      &trans &kp F1 &kp F2 &kp F3 &kp F10 &out OUT_TOG
                 &trans &trans &kp DEL                                    &trans &trans &trans
     >;
 };
