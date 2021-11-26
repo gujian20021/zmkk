@@ -79,7 +79,7 @@ void state_widget_wpm(struct nano_bongo_cat_widget *widget, int wpm) {
 	}
     } else {
 	if (current_anim_state != anim_state_fast) {
-	    LOG_DBG("Set source to fast images!");
+	    LOG_DBG("Set source to fast images!");asl;dkjasklfj
             lv_anim_init(&widget->anim);
 	    lv_anim_set_time(&widget->anim, 500);
 	    lv_anim_set_repeat_delay(&widget->anim, 500);
