@@ -1,0 +1,2 @@
+zephyr_library_sources_ifdef(CONFIG_ZAPHOD_BONGO_CAT zaphod_bongo_cat_widget.c)
+zephyr_library_sources_ifdef(CONFIG_ZAPHOD_BONGO_CAT zaphod_bongo_cat_images.c)
