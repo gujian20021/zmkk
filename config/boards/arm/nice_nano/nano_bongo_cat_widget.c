@@ -10,7 +10,7 @@
 #include <logging/log.h>
 LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 
-#include "zaphod_bongo_cat_widget.h"
+#include "nano_bongo_cat_widget.h"
 
 static sys_slist_t widgets = SYS_SLIST_STATIC_INIT(&widgets);
 
@@ -54,9 +54,9 @@ void set_img_src(void *var, lv_anim_value_t val) {
 }
 
 
-void state_widget_wpm(struct zaphod_bongo_cat_widget *widget, int wpm) {
+void state_widget_wpm(struct nano_bongo_cat_widget *widget, int wpm) {
     LOG_DBG("anim state %d", current_anim_state);
-    if (wpm < CONFIG_ZAPHOD_BONGO_CAT_IDLE_LIMIT) {
+    if (wpm < CONFIG_NANO_BONGO_CAT_IDLE_LIMIT) {
 	if (current_anim_state != anim_state_idle) {
 	    LOG_DBG("Set source to idle images!");
             lv_anim_init(&widget->anim);
@@ -70,7 +70,7 @@ void state_widget_wpm(struct zaphod_bongo_cat_widget *widget, int wpm) {
 	    current_anim_state = anim_state_idle;
 	    lv_anim_start(&widget->anim);
 	}
-    } else if (wpm < CONFIG_ZAPHOD_BONGO_CAT_SLOW_LIMIT) {
+    } else if (wpm < CONFIG_NANO_BONGO_CAT_SLOW_LIMIT) {
 	if (current_anim_state != anim_state_slow) {
 	    LOG_DBG("Set source to slow image!");
 	    lv_anim_del(widget->obj, set_img_src);
@@ -94,7 +94,7 @@ void state_widget_wpm(struct zaphod_bongo_cat_widget *widget, int wpm) {
     }
 }
 
-int zaphod_bongo_cat_widget_init(struct zaphod_bongo_cat_widget *widget, lv_obj_t *parent) {
+int nano_bongo_cat_widget_init(struct nano_bongo_cat_widget *widget, lv_obj_t *parent) {
     widget->obj = lv_img_create(parent, NULL);
     
 
@@ -106,17 +106,17 @@ int zaphod_bongo_cat_widget_init(struct zaphod_bongo_cat_widget *widget, lv_obj_
     return 0;
 }
 
-lv_obj_t *zaphod_bongo_cat_widget_obj(struct zaphod_bongo_cat_widget  *widget) {
+lv_obj_t *nano_bongo_cat_widget_obj(struct nano_bongo_cat_widget  *widget) {
     return widget->obj;
 }
 
 int wpm_status_listener(const zmk_event_t *eh) {
-    struct zaphod_bongo_cat_widget *widget;
+    struct nano_bongo_cat_widget *widget;
     struct zmk_wpm_state_changed *ev = as_zmk_wpm_state_changed(eh);
     LOG_DBG("LISTENER");
     SYS_SLIST_FOR_EACH_CONTAINER(&widgets, widget, node) { LOG_DBG("Set the WPM %d", ev->state); state_widget_wpm(widget, ev->state); }
     return ZMK_EV_EVENT_BUBBLE;
 }
 
-ZMK_LISTENER(zaphod_bongo_cat_widget, wpm_status_listener)
-ZMK_SUBSCRIPTION(zaphod_bongo_cat_widget, zmk_wpm_state_changed);
+ZMK_LISTENER(nano_bongo_cat_widget, wpm_status_listener)
+ZMK_SUBSCRIPTION(nano_bongo_cat_widget, zmk_wpm_state_changed);

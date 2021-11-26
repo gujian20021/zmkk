@@ -1,13 +1,10 @@
 # Copyright (c) 2020 Pete Johanson
 # SPDX-License-Identifier: MIT
 
-if BOARD_ZAPHOD
+if BOARD_NICE_NANO || BOARD_NICE_NANO_V2
 
 config BOARD
-	default "zaphod"
-
-config ZMK_KEYBOARD_NAME
-	default "Zaphod"
+	default "nice_nano"
 
 if USB
 
@@ -78,7 +75,18 @@ config ZMK_BLE
 config ZMK_USB
 	default y
 
+endif # BOARD_NICE_NANO || BOARD_NICE_NANO_V2
+
+if BOARD_NICE_NANO
+
 config ZMK_BATTERY_VOLTAGE_DIVIDER
 	default y
 
-endif # BOARD_ZAPHOD
+endif # BOARD_NICE_NANO
+
+if BOARD_NICE_NANO_V2
+
+config ZMK_BATTERY_NRF_VDDH
+	default y
+
+endif # BOARD_NICE_NANO_V2

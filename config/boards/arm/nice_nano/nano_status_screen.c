@@ -13,10 +13,10 @@
 #include <logging/log.h>
 LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 
-#if IS_ENABLED(CONFIG_ZAPHOD_BONGO_CAT)
-#include "zaphod_bongo_cat_widget.h"
+#if IS_ENABLED(CONFIG_NANO_BONGO_CAT)
+#include "nano_bongo_cat_widget.h"
 
-static struct zaphod_bongo_cat_widget bongo_widget;
+static struct nano_bongo_cat_widget bongo_widget;
 
 #endif
 
@@ -40,7 +40,7 @@ lv_style_t global_style;
 
 lv_obj_t *zmk_display_status_screen() {
     lv_obj_t *screen;
-#if !IS_ENABLED(CONFIG_ZAPHOD_BONGO_CAT)
+#if !IS_ENABLED(CONFIG_NANO_BONGO_CAT)
     lv_obj_t *dont_label;
     lv_obj_t *panic_label;
 #endif
@@ -73,15 +73,15 @@ lv_obj_t *zmk_display_status_screen() {
     lv_cont_set_fit(center_frame, LV_FIT_TIGHT);
     lv_cont_set_layout(center_frame, LV_LAYOUT_CENTER);
 
-#if IS_ENABLED(CONFIG_ZAPHOD_BONGO_CAT)
-    zaphod_bongo_cat_widget_init(&bongo_widget, center_frame);
+#if IS_ENABLED(CONFIG_NANO_BONGO_CAT)
+    nano_bongo_cat_widget_init(&bongo_widget, center_frame);
 #else
-    dont_label = lv_label_create(center_frame, NULL);
-    lv_label_set_text(dont_label, "Don't");
+    // dont_label = lv_label_create(center_frame, NULL);
+    // lv_label_set_text(dont_label, "Don't");
 
-    panic_label = lv_label_create(center_frame, NULL);
-    lv_label_set_text(panic_label, "Panic");
-#endif // IS_ENABLED(CONFIG_ZAPHOD_BONGO_CAT)
+    // panic_label = lv_label_create(center_frame, NULL);
+    // lv_label_set_text(panic_label, "Panic");
+#endif // IS_ENABLED(CONFIG_NANO_BONGO_CAT)
 
 #if IS_ENABLED(CONFIG_ZMK_WIDGET_LAYER_STATUS)
     zmk_widget_layer_status_init(&layer_status_widget, screen);
