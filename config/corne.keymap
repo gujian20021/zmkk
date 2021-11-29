@@ -102,8 +102,8 @@ macro_layer {
 //                   |     | DEL |     |   |     |     |     |
     bindings = <
         &trans &trans &trans &trans &kp F4 &rgb_ug RGB_HUI                              &trans &kp F7 &kp F8 &kp F9 &kp F12 &rgb_ug RGB_TOG
-        &trans &kp K_REDO &kp C_AC_SAVE &kp LALT &rgb_ug RGB_BRI &rgb_ug RGB_BRD        &trans &kp F4 &kp F5 &kp F6 &kp F11 &bt BT_CLR
-        &trans &kp K_UNDO &kp K_CUT &kp K_COPY &kp K_PASTE &rgb_ug RGB_EFF                      &trans &kp F1 &kp F2 &kp F3 &kp F10 &out OUT_TOG
+        &trans &kp LCTRL(LSHFT(Z)) &kp LCTRL(S) &kp LALT &rgb_ug RGB_BRI &rgb_ug RGB_BRD        &trans &kp F4 &kp F5 &kp F6 &kp F11 &bt BT_CLR
+        &trans &kp LCTRL(Z) &kp LCTRL(X) &kp LCTRL(C) &kp LCTRL(V) &rgb_ug RGB_EFF                      &trans &kp F1 &kp F2 &kp F3 &kp F10 &out OUT_TOG
                 &trans &trans &kp DEL                                    &trans &trans &trans
     >;
 };
