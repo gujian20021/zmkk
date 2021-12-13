@@ -4,11 +4,18 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: cdc-mkb
       url-base: https://github.com/cdc-mkb
+    - name: fossephate
+      url-base: https://github.com/fossephate
   projects:
     - name: zmk
-      remote: cdc-mkb
-      revision: mouse-pim447
+      remote: fosse
+      revision: main
       import: app/west.yml
+  # projects:
+  #   - name: zmk
+  #     remote: cdc-mkb
+  #     revision: mouse-pim447
+  #     import: app/west.yml
   # projects:
   #   - name: zmk
   #     remote: zmkfirmware
