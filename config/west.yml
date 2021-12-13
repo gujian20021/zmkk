@@ -8,7 +8,7 @@ manifest:
       url-base: https://github.com/fossephate
   projects:
     - name: zmk
-      remote: fosse
+      remote: fossephate
       revision: main
       import: app/west.yml
   # projects:
