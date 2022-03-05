@@ -60,12 +60,12 @@ qwerty_layer {
 
 nav_layer {
 // -----------------------------------------------------------------------------------------
-// |     | TAB |STAB |CTAB |CSTAB|WTAB |   |     |BSPC | DEL |     | ENT |     |
+// |     | TAB |STAB |WTAB |     |     |   |     |BSPC | DEL |     | ENT |     |
 // |     |CTRL |SHFT | WIN | ALT |     |   |CAPS | LFT | DWN | UP  | RGT |     |
 // |     |UNDO | CUT | CPY |PSTE |REDO |   | INS |HOME |PGDN |PGUP | END |     |
 //                   |     |     |     |   |     |     |     |
     bindings = <
-        &trans &kp TAB &kp LS(TAB) &kp LC(TAB) &kp LC(LS(TAB)) &kp LWIN(TAB)               &trans &kp BSPC &kp DEL &trans &kp RETURN &trans
+        &trans &kp TAB &kp LS(TAB) &kp LWIN(TAB) &trans &trans               &trans &kp BSPC &kp DEL &trans &kp RETURN &trans
         &trans &sk LCTRL &sk LSHFT &sk LWIN &sk LALT &trans         &kp CAPS &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans
         &trans &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &kp LC(LS(Z))                   &trans &kp HOME &kp PG_DN &kp PG_UP &kp END &trans
                 &trans &trans &trans                                    &trans &trans &trans
