@@ -65,7 +65,7 @@ nav_layer {
 // |     |UNDO | CUT | CPY |PSTE |REDO |   | INS |HOME |PGDN |PGUP | END |     |
 //                   |     |     |     |   |     |     |     |
     bindings = <
-        &trans &kp TAB &kp LS(TAB) &kp LWIN(TAB) &trans &trans               &trans &kp BSPC &kp DEL &trans &kp RETURN &trans
+        &trans &kp TAB &kp LS(TAB) &kp LG(TAB) &trans &trans               &trans &kp BSPC &kp DEL &trans &kp RETURN &trans
         &trans &sk LCTRL &sk LSHFT &sk LWIN &sk LALT &trans         &kp CAPS &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans
         &trans &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &kp LC(LS(Z))                   &trans &kp HOME &kp PG_DN &kp PG_UP &kp END &trans
                 &trans &trans &trans                                    &trans &trans &trans
